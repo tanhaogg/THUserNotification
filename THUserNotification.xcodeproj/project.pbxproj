@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046D0E7F15DEA0D30031711E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046D0E7E15DEA0D30031711E /* Cocoa.framework */; };
+		046D0E8915DEA0D30031711E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 046D0E8715DEA0D30031711E /* InfoPlist.strings */; };
+		046D0E8B15DEA0D30031711E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0E8A15DEA0D30031711E /* main.m */; };
+		046D0E8F15DEA0D30031711E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 046D0E8D15DEA0D30031711E /* Credits.rtf */; };
+		046D0E9215DEA0D30031711E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0E9115DEA0D30031711E /* AppDelegate.m */; };
+		046D0E9515DEA0D30031711E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046D0E9315DEA0D30031711E /* MainMenu.xib */; };
+		046D0EA115DEA0FE0031711E /* banner2lines.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 046D0E9C15DEA0FE0031711E /* banner2lines.tiff */; };
+		046D0EA215DEA0FE0031711E /* McAnimationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0E9E15DEA0FE0031711E /* McAnimationUtility.m */; };
+		046D0EA315DEA0FE0031711E /* THUserNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D0EA015DEA0FE0031711E /* THUserNotification.m */; };
+		046D0EA515DEA13E0031711E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046D0EA415DEA13E0031711E /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		046D0E7A15DEA0D30031711E /* THUserNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THUserNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D0E7E15DEA0D30031711E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		046D0E8115DEA0D30031711E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		046D0E8215DEA0D30031711E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		046D0E8315DEA0D30031711E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		046D0E8615DEA0D30031711E /* THUserNotification-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "THUserNotification-Info.plist"; sourceTree = "<group>"; };
+		046D0E8815DEA0D30031711E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		046D0E8A15DEA0D30031711E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		046D0E8C15DEA0D30031711E /* THUserNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THUserNotification-Prefix.pch"; sourceTree = "<group>"; };
+		046D0E8E15DEA0D30031711E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		046D0E9015DEA0D30031711E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		046D0E9115DEA0D30031711E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		046D0E9415DEA0D30031711E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		046D0E9C15DEA0FE0031711E /* banner2lines.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = banner2lines.tiff; sourceTree = "<group>"; };
+		046D0E9D15DEA0FE0031711E /* McAnimationUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McAnimationUtility.h; sourceTree = "<group>"; };
+		046D0E9E15DEA0FE0031711E /* McAnimationUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McAnimationUtility.m; sourceTree = "<group>"; };
+		046D0EA015DEA0FE0031711E /* THUserNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THUserNotification.m; sourceTree = "<group>"; };
+		046D0EA415DEA13E0031711E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		046D0EA615DEA2A40031711E /* THUserNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THUserNotification.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046D0E7715DEA0D30031711E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D0EA515DEA13E0031711E /* QuartzCore.framework in Frameworks */,
+				046D0E7F15DEA0D30031711E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046D0E6F15DEA0D30031711E = {
+			isa = PBXGroup;
+			children = (
+				046D0EA415DEA13E0031711E /* QuartzCore.framework */,
+				046D0E8415DEA0D30031711E /* THUserNotification */,
+				046D0E7D15DEA0D30031711E /* Frameworks */,
+				046D0E7B15DEA0D30031711E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046D0E7B15DEA0D30031711E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E7A15DEA0D30031711E /* THUserNotification.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046D0E7D15DEA0D30031711E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E7E15DEA0D30031711E /* Cocoa.framework */,
+				046D0E8015DEA0D30031711E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		046D0E8015DEA0D30031711E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E8115DEA0D30031711E /* AppKit.framework */,
+				046D0E8215DEA0D30031711E /* CoreData.framework */,
+				046D0E8315DEA0D30031711E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		046D0E8415DEA0D30031711E /* THUserNotification */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E9B15DEA0FE0031711E /* THUserNotification */,
+				046D0E9015DEA0D30031711E /* AppDelegate.h */,
+				046D0E9115DEA0D30031711E /* AppDelegate.m */,
+				046D0E9315DEA0D30031711E /* MainMenu.xib */,
+				046D0E8515DEA0D30031711E /* Supporting Files */,
+			);
+			path = THUserNotification;
+			sourceTree = "<group>";
+		};
+		046D0E8515DEA0D30031711E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E8615DEA0D30031711E /* THUserNotification-Info.plist */,
+				046D0E8715DEA0D30031711E /* InfoPlist.strings */,
+				046D0E8A15DEA0D30031711E /* main.m */,
+				046D0E8C15DEA0D30031711E /* THUserNotification-Prefix.pch */,
+				046D0E8D15DEA0D30031711E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		046D0E9B15DEA0FE0031711E /* THUserNotification */ = {
+			isa = PBXGroup;
+			children = (
+				046D0E9C15DEA0FE0031711E /* banner2lines.tiff */,
+				046D0E9D15DEA0FE0031711E /* McAnimationUtility.h */,
+				046D0E9E15DEA0FE0031711E /* McAnimationUtility.m */,
+				046D0EA615DEA2A40031711E /* THUserNotification.h */,
+				046D0EA015DEA0FE0031711E /* THUserNotification.m */,
+			);
+			path = THUserNotification;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046D0E7915DEA0D30031711E /* THUserNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046D0E9815DEA0D30031711E /* Build configuration list for PBXNativeTarget "THUserNotification" */;
+			buildPhases = (
+				046D0E7615DEA0D30031711E /* Sources */,
+				046D0E7715DEA0D30031711E /* Frameworks */,
+				046D0E7815DEA0D30031711E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = THUserNotification;
+			productName = THUserNotification;
+			productReference = 046D0E7A15DEA0D30031711E /* THUserNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046D0E7115DEA0D30031711E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = TanHao;
+			};
+			buildConfigurationList = 046D0E7415DEA0D30031711E /* Build configuration list for PBXProject "THUserNotification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 046D0E6F15DEA0D30031711E;
+			productRefGroup = 046D0E7B15DEA0D30031711E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046D0E7915DEA0D30031711E /* THUserNotification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046D0E7815DEA0D30031711E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D0E8915DEA0D30031711E /* InfoPlist.strings in Resources */,
+				046D0E8F15DEA0D30031711E /* Credits.rtf in Resources */,
+				046D0E9515DEA0D30031711E /* MainMenu.xib in Resources */,
+				046D0EA115DEA0FE0031711E /* banner2lines.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046D0E7615DEA0D30031711E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D0E8B15DEA0D30031711E /* main.m in Sources */,
+				046D0E9215DEA0D30031711E /* AppDelegate.m in Sources */,
+				046D0EA215DEA0FE0031711E /* McAnimationUtility.m in Sources */,
+				046D0EA315DEA0FE0031711E /* THUserNotification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		046D0E8715DEA0D30031711E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046D0E8815DEA0D30031711E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		046D0E8D15DEA0D30031711E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046D0E8E15DEA0D30031711E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		046D0E9315DEA0D30031711E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046D0E9415DEA0D30031711E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046D0E9615DEA0D30031711E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		046D0E9715DEA0D30031711E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		046D0E9915DEA0D30031711E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "THUserNotification/THUserNotification-Prefix.pch";
+				INFOPLIST_FILE = "THUserNotification/THUserNotification-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		046D0E9A15DEA0D30031711E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "THUserNotification/THUserNotification-Prefix.pch";
+				INFOPLIST_FILE = "THUserNotification/THUserNotification-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046D0E7415DEA0D30031711E /* Build configuration list for PBXProject "THUserNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D0E9615DEA0D30031711E /* Debug */,
+				046D0E9715DEA0D30031711E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046D0E9815DEA0D30031711E /* Build configuration list for PBXNativeTarget "THUserNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D0E9915DEA0D30031711E /* Debug */,
+				046D0E9A15DEA0D30031711E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046D0E7115DEA0D30031711E /* Project object */;
+}
