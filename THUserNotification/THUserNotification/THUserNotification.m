@@ -248,6 +248,7 @@
     {
         type = THUserNotificationActivationTypeContentsClicked;
     }
+    activationType = type;
     [delegate userNotification:self didActivateType:type];
 }
 
