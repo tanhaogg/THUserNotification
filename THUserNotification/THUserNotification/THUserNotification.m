@@ -86,6 +86,8 @@
     self = [super init];
     if (self)
     {
+        hasActionButton = YES;
+        
         //create UI
         showWindow = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, 0, 328, 100)
                                                  styleMask:NSBorderlessWindowMask
@@ -113,7 +115,7 @@
         [bgView setImage:bgImg];
         [[showWindow contentView] addSubview:bgView];
         
-        NSString *iconPath = [[NSBundle bundleForClass:self.class] bundlePath];
+        NSString *iconPath = [[NSBundle mainBundle] bundlePath];
         NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:iconPath];
         [icon setSize:NSMakeSize(32, 32)];
         iconView = [[NSImageView alloc] initWithFrame:NSMakeRect(20, 50, 32, 32)];
@@ -497,13 +499,6 @@
 
 - (void)presentedNotification:(THUserNotification *)notification
 {
-    if (notification.isVisible)
-    {
-        [notification presentedNotification];
-        [self sortVisibleNotifications];
-        return;
-    }
-    
     if (![deliveredNotifications containsObject:notification])
     {
         [(NSMutableArray *)deliveredNotifications addObject:notification];
@@ -511,6 +506,14 @@
     if ([scheduledNotifications containsObject:notification])
     {
         [(NSMutableArray *)scheduledNotifications removeObject:notification];
+    }
+    
+    if (notification.isVisible)
+    {
+        [notification setup:centerType];
+        [notification presentedNotification];
+        [self sortVisibleNotifications];
+        return;
     }
     
     //显现该条消息
@@ -572,7 +575,7 @@
     //先检测是否有计划任务触发(相比周期任务优先级高一些)
     for (THUserNotification *aNotification in scheduledNotificationsCopy)
     {
-        if ([[aNotification deliveryDate] timeIntervalSinceNow] <= 0 && !aNotification.isPresented)
+        if ([[aNotification deliveryDate] timeIntervalSinceNow] <= 0)
         {
             [self presentedNotification:aNotification];
             return;
@@ -633,7 +636,10 @@
 
 - (void)scheduleNotification:(THUserNotification *)notification
 {
-    [(NSMutableArray *)scheduledNotifications addObject:notification];
+    if (![scheduledNotifications containsObject:notification])
+    {
+        [(NSMutableArray *)scheduledNotifications addObject:notification];
+    }
 }
 
 - (void)removeScheduledNotification:(THUserNotification *)notification

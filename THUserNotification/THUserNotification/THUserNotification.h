@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+/*
 typedef NS_ENUM(NSInteger, THUserNotificationActivationType) {
     THUserNotificationActivationTypeNone = NSUserNotificationActivationTypeNone,
     THUserNotificationActivationTypeContentsClicked = NSUserNotificationActivationTypeContentsClicked,
@@ -16,9 +17,27 @@ typedef NS_ENUM(NSInteger, THUserNotificationActivationType) {
 
 typedef NS_ENUM(NSInteger, THUserNotificationCenterType) {
     THUserNotificationCenterTypeNone = 0,
-    THUserNotificationCenterTypeBanner,
-    THUserNotificationCenterTypeAlert
+    THUserNotificationCenterTypeBanner = 1,
+    THUserNotificationCenterTypeAlert = 2
 };
+ */
+
+enum
+{
+    THUserNotificationActivationTypeNone = 0,
+    THUserNotificationActivationTypeContentsClicked = 1,
+    THUserNotificationActivationTypeActionButtonClicked = 2
+};
+typedef NSInteger THUserNotificationActivationType;
+
+enum
+{
+    THUserNotificationCenterTypeNone = 0,
+    THUserNotificationCenterTypeBanner = 1,
+    THUserNotificationCenterTypeAlert = 2
+};
+typedef NSInteger THUserNotificationCenterType;
+
 
 @interface THUserNotification : NSObject
 
@@ -49,7 +68,7 @@ typedef NS_ENUM(NSInteger, THUserNotificationCenterType) {
 
 @property BOOL hasActionButton;
 
-@property (readonly) NSUserNotificationActivationType activationType;
+@property (readonly) THUserNotificationActivationType activationType;
 
 @property (copy) NSString *otherButtonTitle;
 
