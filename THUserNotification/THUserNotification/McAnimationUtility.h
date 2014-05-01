@@ -15,5 +15,6 @@
 
 @interface NSImage (stretchable)
 - (NSImage *)drawStretchableInRect:(NSRect)rect edgeInsets:(NSEdgeInsets)insets;
+- (NSImage *)stretchableImageWithLeftCapWidth:(float)leftWidth middleWidth:(float)middleWidth rightCapWidth:(float)rightWidth;
 + (NSImage *)image:(NSImage *)image leftCapWidth:(float)leftWidth middleWidth:(float)middleWidth rightCapWidth:(float)rightWidth;
 @end

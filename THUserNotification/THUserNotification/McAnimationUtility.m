@@ -135,11 +135,11 @@
     }
     
     // Generate the middle image
-    NSRect rectMiddle = NSMakeRect(0, 0, image.size.width - (rightWidth + leftWidth), imageHeight);
+    NSRect rectMiddle = NSMakeRect(0, 0, middleWidth, imageHeight);
     NSImage *imageMiddle = [[NSImage alloc] initWithSize:rectMiddle.size];
     if (imageMiddle.size.width > 0) {
         [imageMiddle lockFocus];
-        [image drawInRect:rectMiddle fromRect:NSMakeRect(leftWidth, 0, rectMiddle.size.width, imageHeight) operation:NSCompositeCopy fraction:1.0];
+        [image drawInRect:rectMiddle fromRect:NSMakeRect(leftWidth, 0, image.size.width-rightWidth-leftWidth,imageHeight) operation:NSCompositeCopy fraction:1.0];
         [imageMiddle unlockFocus];
     }
     

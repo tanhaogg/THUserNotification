@@ -9,14 +9,33 @@
 #import "AppDelegate.h"
 #import "THUserNotification.h"
 
+typedef void(^testBlock)(void);
+@interface THTest : NSObject
+@property (copy) testBlock block;
+@end
+
+@implementation THTest
+@synthesize block;
+
+@end
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+    //删除已经在执行的通知(比如那些循环递交的通知)
+//    for (NSUserNotification *notify in [[NSUserNotificationCenter defaultUserNotificationCenter] scheduledNotifications])
+//    {
+//        [[NSUserNotificationCenter defaultUserNotificationCenter] removeScheduledNotification:notify];
+//    }
+//    return;
+    
     //设置通知的样式
     [[THUserNotificationCenter defaultUserNotificationCenter] setCenterType:THUserNotificationCenterTypeBanner];
-    for (int i=0; i<10; i++)
+    for (int i=0; i<1; i++)
     {
+        //THUserNotification *notify = [[THUserNotification alloc] init];
         THUserNotification *notify = [[THUserNotification alloc] init];
         NSString *title = [NSString stringWithFormat:@"标题%d",i+1];
         notify.title = title;
@@ -26,11 +45,11 @@
         //只有当用户设置为提示模式时，才会显示按钮
         notify.hasActionButton = YES;
         
-        notify.deliveryDate = [NSDate dateWithTimeIntervalSinceNow:5*(i+1)];        
-        NSDateComponents *comps = [[NSDateComponents alloc] init];
-        [comps setSecond:(i+1)*10];
-        notify.deliveryRepeatInterval = comps;
-        
+//        notify.deliveryDate = [NSDate dateWithTimeIntervalSinceNow:5*(i+1)];        
+//        NSDateComponents *comps = [[NSDateComponents alloc] init];
+//        [comps setSecond:(i+1)*100];
+//        notify.deliveryRepeatInterval = comps;
+        [[THUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
         [[THUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notify];
     }
     
@@ -84,7 +103,7 @@
 
 - (void)userNotificationCenter:(THUserNotificationCenter *)center didActivateNotification:(THUserNotification *)notification
 {
-    NSLog(@"用户点击了通知！");
+    NSLog(@"用户点击了通知！%@",notification);
     
     if (notification.activationType == THUserNotificationActivationTypeNone)
     {
